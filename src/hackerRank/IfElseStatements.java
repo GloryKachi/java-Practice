@@ -13,26 +13,19 @@ public class IfElseStatements {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        int num = scanner.nextInt();
+        int n = scanner.nextInt();
 
-        if (num % 2 != 0) {
-            System.out.println("Weird");
-        }
-        if (num % 2 == 0) {
-            if (num >= 2 && num <= 5) {
-                System.out.println("Not Weird");
-            }
-        }
-        if (num % 2 == 0) {
-            if (num >= 6 && num <= 20) {
-                System.out.println("Weird");
-            }
-        }
+        boolean nIsOdd = n % 2 != 0;
+        boolean nIsEven = n % 2 == 0;
+        boolean nIsInRangeOf6and20 = n >= 6 && n <= 20;
+        boolean nIsInRangeOf2and5 = n >=2 && n <=5;
+        boolean nIsGreaterThan20 = n > 20;
 
-        if (num % 2 == 0){
-            if (num > 20){
-                System.out.println("Not Weird");
-            }
-        }
+        if (nIsOdd) System.out.println("Weird");
+        if (nIsEven && nIsInRangeOf2and5) System.out.println("Not Weird");
+        if (nIsEven && nIsInRangeOf6and20) System.out.println("Weird");
+        if (nIsEven && nIsGreaterThan20) System.out.println("Not Weird");
     }
+
 }
+
